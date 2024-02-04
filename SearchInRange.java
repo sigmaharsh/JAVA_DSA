@@ -9,7 +9,7 @@ public class SearchInRange {
 
        int[] arr = new int[n];
 
-
+             // for loop to take input from user
         for (int i = 0; i < arr.length; i++) {
             arr[i]= sc.nextInt();
         }
@@ -26,6 +26,8 @@ public class SearchInRange {
         System.out.println(ans);
 
     }
+
+    // this is the method used for searching in range int include the array the target u want to search start index and the end index
     static int searchinrange(int[] arr, int target , int start , int end){
         if (arr.length == 0){
             return -1;
