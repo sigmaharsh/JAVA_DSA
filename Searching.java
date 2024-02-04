@@ -8,7 +8,7 @@ public class Searching {
         System.out.println(ans);
     }
 
-
+// creating function
         static  int linearSearch(int[] arr,int target){
             if( arr.length == 0) {
               return -1;
