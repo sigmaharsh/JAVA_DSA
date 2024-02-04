@@ -20,13 +20,13 @@ public class Searching {
                 if (element == target){
                     return i ;
 
-
             }
 
 
         }
          return -1;
     }
+
 }
 
 
