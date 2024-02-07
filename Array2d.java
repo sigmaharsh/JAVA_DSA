@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Array2d {
@@ -12,30 +13,37 @@ public class Array2d {
         };
         System.out.println("enter the target");
         int target =sc.nextInt();
-        search(arr,target);
+        int[] ans = search(arr,target);
+        System.out.println(Arrays.toString(ans));
 
     }
 
 
 
 
-    static void search(int[][] arr,int target){
-        for (int row_index = 0; row_index < arr.length; row_index++) {
-            for (int column_index = 0; column_index <arr[row_index].length; column_index++) {
-                int element = arr[row_index][column_index];
-                if (element==target){
-                    System.out.println(" row number :"+row_index+"  column number:"+column_index);
+    static int[] search(int[][] arr,int target){
+        for (int row = 0; row < arr.length; row++) {
+            for (int column = 0; column <arr[row].length; column++) {
 
+                if ( arr[row][column]==target) {
+                    return new int[]{row,column};
                 }
+
+
+
+
+
 
 
             }
 
 
+
+
         }
 
-            System.out.println("target not found!!");
 
+        return new int[]{-1,-1};
     }
 
 
