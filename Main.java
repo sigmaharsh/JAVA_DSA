@@ -1,38 +1,44 @@
 import java.util.Scanner;
 
-public class Main{
+public class Main {
+  // this is a commemt please ignore it
+  public static void main(String[] args) {
 
-    public static void main(String[] args) {
-
-
-      //take input from user for array
-        Scanner sc = new Scanner(System.in);
-        int[][] arr = new int[3][3];
-        for (int i = 0; i < arr.length; i++) {
-            for (int j = 0; j < arr[i].length; j++)
-             {
-             arr[i][j] = sc.nextInt();
-            }
-
-
-        }
-        //this line of code prints the 2d array
-        for (int[] ints : arr) {
-            for (int j = 0; j < ints.length; j++) {
-                System.out.print(ints[j] + " ");
-
-            }
-            System.out.println(" ");
-
-        }
-
-
-
-
+    Scanner sc = new Scanner(System.in);
+    System.out.println("enter array size");
+    int n;
+    n = sc.nextInt();
+    int[] arr = new int[n];
+    for (int i = 0; i < arr.length; i++) {
+      arr[i] = sc.nextInt();
 
     }
+    System.out.println("enter target");
+    int target = sc.nextInt();
+    int ans = binsearch(arr, target);
+    System.out.println(ans);
 
+  }
+
+  static int binsearch(int[] arr, int target) {
+    int low = 0;
+    int high = arr.length - 1;
+    while (low <= high) {
+      int mid = low + (high - low) / 2;
+
+      if (arr[mid] == target) {
+        return mid;
+      }
+
+      else if (arr[mid] < target) {
+        low = mid + 1;
+
+      } else {
+        high = mid - 1;
+      }
+
+    }
+    return -1;
+
+  }
 }
-
-
-
