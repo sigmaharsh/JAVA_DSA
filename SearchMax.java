@@ -9,7 +9,7 @@ public class SearchMax {
     static int max(int[] arr ){
         int ans = arr[0];
         for (int i = 1; i < arr.length ; i++)
-        {
+        { //checks if element is gretaer than the intitially assigend element here its the zeroth index
            if(arr[i]> ans){
                ans = arr[i];
 
