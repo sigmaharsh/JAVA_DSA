@@ -15,6 +15,7 @@ public class Agnosticbinsearch{
         int target ;
         System.out.println("enter target:");
         target = sc.nextInt();
+        sc.close();
         
         int ans = agnosticbinsearch(arr, target);
         System.out.println(ans);
