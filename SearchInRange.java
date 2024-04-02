@@ -20,6 +20,7 @@ public class SearchInRange {
         int start = sc.nextInt();
         System.out.println("enter range of end");
         int end = sc.nextInt();
+        sc.close();
 
 
        int ans = searchinrange( arr ,target,start,end);

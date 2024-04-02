@@ -15,6 +15,7 @@ public class Main {
     }
     System.out.println("enter target");
     int target = sc.nextInt();
+    sc.close();
     int ans = binsearch(arr, target);
     System.out.println(ans);
 

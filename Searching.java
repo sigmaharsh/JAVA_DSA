@@ -14,6 +14,7 @@ public class Searching {
     }
     System.out.println("enter target to search");
     int target = sc.nextInt();
+    sc.close();
     int ans = linearSearch(arr, target);
     System.out.println("the target is present in the position : " + ans);
   }
