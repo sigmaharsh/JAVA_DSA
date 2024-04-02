@@ -1,21 +1,12 @@
-import java.util.Scanner;
-
 public class Agnosticbinsearch{
     public static void main(String[] args) {
-        int size ;
-        System.out.println("enter size :");
-        Scanner sc = new Scanner(System.in);
-        size = sc.nextInt();
-        int[] arr = new int[size];
-        System.out.println("enter array elements");
-        for (int i = 0; i < arr.length; i++) {
-            arr[i] = sc.nextInt();
-        }
+       
+        int[] arr = {190,123,90,89,78,9,2,1};
+       
 
-        int target ;
-        System.out.println("enter target:");
-        target = sc.nextInt();
-        sc.close();
+        int target = 9;
+        
+  
         
         int ans = agnosticbinsearch(arr, target);
         System.out.println(ans);
